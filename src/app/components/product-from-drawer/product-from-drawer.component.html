@@ -1,0 +1,43 @@
+<div class="offcanvas-header">
+  <h4 class="modal-title" id="modal-basic-title">{{ isnew ? 'Crear' : 'Actualizar' }} Producto</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="dismiss()"></button>
+</div>
+<div class="offcanvas-body">
+  <form [formGroup]="form">
+    <div class="row px-4 py-1">
+      <div class="col">
+        <div class="form-group">
+          <label for="">Nombre</label>
+          <input type="text" formControlName="nombre" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="row px-4 py-1">
+      <div class="col">
+        <div class="form-group">
+          <label for="">Descripcion</label>
+          <input type="text" formControlName="descripcion" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="row px-4 py-1">
+      <div class="col">
+        <div class="form-group">
+          <label for="">Precio</label>
+          <input type="number" formControlName="precio" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="row px-4 py-1">
+      <div class="col">
+        <div class="form-group">
+          <label for="">Stock</label>
+          <input type="number" formControlName="stock" class="form-control">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="offcanvas-bottom px-xxl-3">
+  <button type="button" class="btn btn-outline-primary" (click)="save()">Ok</button>
+</div>

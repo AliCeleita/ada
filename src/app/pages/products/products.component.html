@@ -1,0 +1,15 @@
+<app-table
+  [columns]="[
+    { key: 'nombre', header: 'Nombre', sortable: true },
+    { key: 'descripcion', header: 'Descripcion', sortable: true },
+    { key: 'precio', header: 'Precio', sortable: true },
+    { key: 'stock', header: 'Stock', sortable: true },
+  ]"
+  [data]="products"
+  [total]="total"
+  [(page)]="page"
+  [querySearch]="querySearch"
+  [(pageSize)]="pageSize"
+  (edit)="edit($event)"
+  (delete)="delete($event)"
+></app-table>
